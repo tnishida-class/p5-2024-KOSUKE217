@@ -2,22 +2,41 @@
 // 練習問題：ボールのサイズをランダムに変更してみよう
 // 練習問題：何も操作しなくてもボールが湧いてくる機能を追加しよう
 
-let balls;
+//let balls;
+ballsize = [];
+ballx=[];
+bally=[];
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  balls = [];
+  
+  
 }
 
 function draw(){
   background(160, 192, 255);
-  for(let i = 0; i < balls.length; i++){
-    let b = balls[i];
-    ellipse(b.x, b.y, b.size);
-    b.x += b.vx;
-    b.y += b.vy;
+  for(let i=0;i<10;i++){
+    ballsize[i]=random(5,100);
+    ballx[i]=random(5,455);
+    bally[i]=random(5,455);
   }
-}
+  
+  for(i=0;i<10;i++){
+    
+    ellipse(ballx[i],bally[i],ballsize[i]);
+    }
+
+  //for(let i = 0; i <10; i++){
+    //ballsize[i]=random(5,455);
+    
+    //x=random(5,455)
+   // y=random(5,455)
+    //ellipse(x,y,b);
+  }
+  
+ 
+
+
 
 function mouseDragged(){
   const dx = mouseX - pmouseX;

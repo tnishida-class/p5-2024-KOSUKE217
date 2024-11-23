@@ -5,7 +5,7 @@
 // (2) 最初の3本が細い、次の3本が太い、最後の3本がすごく太い
 
 function setup() {
-  createCanvas(100,100);
+  createCanvas(100000,100000);
   background(196);
   for(let i = 0; i < 9; i++){
     // 変えるのはここから
