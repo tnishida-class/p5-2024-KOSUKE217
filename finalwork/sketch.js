@@ -3,7 +3,6 @@
 let bubbles=[];
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  fill(120,65,56);
   background(230, 230, 255);
 }
 
@@ -23,9 +22,7 @@ function draw(){
     ellipse(bubble.x, bubble.y, bubble.size); 
     pop();
     
-    if (bubble.x > width || bubble.y < 0) {
-      bubbles.splice(i, 1);
-    }
+   
   }
   }
   function keyPressed() {
@@ -39,6 +36,7 @@ function draw(){
     };
     bubbles.push(newBubble); 
   }
+
 function drawFrog(){
   fill(30,180,60);
   ellipse(width/2,height-75,100,50);
