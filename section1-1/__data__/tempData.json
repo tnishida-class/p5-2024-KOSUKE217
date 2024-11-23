@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "dataType": "javascript",
+      "bodyData": {
+        "document": {
+          "savedAt": "2024/10/8 11:04:39",
+          "sources": [
+            {
+              "fileExtension": "js",
+              "filename": "sketch.js",
+              "content": "function setup() {\r\n  createCanvas(128,128);\r\n}\r\n\r\nfunction draw() {\r\n  background(0);\r\n  strokeWeight(4);\r\n  fill(178, 100, 162);\r\n  triangle(12,120,116,120,116,10);\r\n  fill(94, 185, 84);\r\n  triangle(0,108,106,108,106,0);\r\n  fill(255);\r\n  textSize(32);\r\n  textFont(\"serif\");\r\n  text(\"50\", 68, 100);\r\n}\r\n\r\n"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
