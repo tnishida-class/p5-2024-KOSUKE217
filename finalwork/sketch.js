@@ -14,30 +14,30 @@ function draw(){
   drawShabonstick();
   for (let i = bubbles.length - 1; i >= 0; i--) {
     let bubble = bubbles[i];
-    bubble.x += bubble.vx; // x方向に移動
-    bubble.y += bubble.vy; // y方向に移動
+    bubble.x += bubble.vx; 
+    bubble.y += bubble.vy; 
 
     push();
-    fill(255, 255, 255, 150); // 半透明の白色
+    fill(255, 255, 255, 150); 
     noStroke();
-    ellipse(bubble.x, bubble.y, bubble.size); // シャボン玉を描画
+    ellipse(bubble.x, bubble.y, bubble.size); 
     pop();
-    // 画面外に出たら配列から削除
+    
     if (bubble.x > width || bubble.y < 0) {
       bubbles.splice(i, 1);
     }
   }
   }
   function keyPressed() {
-    // 新しいシャボン玉を追加
+   
     let newBubble = {
-      x: width / 2 + 110,        // スティックの位置
+      x: width / 2 + 110,       
       y: height - 140,
-      vx: random(2, 4),          // x方向の速度（右上）
-      vy: random(-4, -2),        // y方向の速度（上）
-      size: random(20, 50)       // シャボン玉の大きさ
+      vx: random(2, 4),          
+      vy: random(-4, -2),       
+      size: random(20, 50)      
     };
-    bubbles.push(newBubble); // 配列に追加
+    bubbles.push(newBubble); 
   }
 function drawFrog(){
   fill(30,180,60);
