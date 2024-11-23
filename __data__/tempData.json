@@ -6110,6 +6110,22 @@
           ]
         }
       }
+    },
+    {
+      "dataType": "javascript",
+      "bodyData": {
+        "document": {
+          "studentId": "2300841h",
+          "savedAt": "2024/11/23 12:55:53",
+          "sources": [
+            {
+              "fileExtension": "js",
+              "filename": "sketch.js",
+              "content": "// 最終課題を制作しよう\r\n\r\nlet bubbles=[];\r\nfunction setup(){\r\n  createCanvas(windowWidth, windowHeight);\r\n  fill(120,65,56);\r\n  background(230, 230, 255);\r\n}\r\n\r\nfunction draw(){\r\n  background(149, 192, 236);\r\n  drawGround();\r\n  drawFrog();\r\n  drawShabonstick();\r\n  for (let i = bubbles.length - 1; i >= 0; i--) {\r\n    let bubble = bubbles[i];\r\n    bubble.x += bubble.vx; \r\n    bubble.y += bubble.vy; \r\n\r\n    push();\r\n    fill(255, 255, 255, 150); \r\n    noStroke();\r\n    ellipse(bubble.x, bubble.y, bubble.size); \r\n    pop();\r\n    \r\n    if (bubble.x > width || bubble.y < 0) {\r\n      bubbles.splice(i, 1);\r\n    }\r\n  }\r\n  }\r\n  function keyPressed() {\r\n   \r\n    let newBubble = {\r\n      x: width / 2 + 110,       \r\n      y: height - 140,\r\n      vx: random(2, 4),          \r\n      vy: random(-4, -2),       \r\n      size: random(20, 50)      \r\n    };\r\n    bubbles.push(newBubble); \r\n  }\r\nfunction drawFrog(){\r\n  fill(30,180,60);\r\n  ellipse(width/2,height-75,100,50);\r\n  ellipse(width/2-30,height-100,30,30);\r\n  ellipse(width/2+30,height-100,30,30);\r\n  fill(0);\r\n  ellipse(width/2-30,height-100,5,5);\r\n  ellipse(width/2+30,height-100,5,5);\r\n  fill(255,0,0);\r\n  ellipse(width/2,height-75,10,10);\r\n  \r\n}\r\nfunction drawShabonstick(){\r\n  fill(230,230,255)\r\n  ellipse(width/2+110,height-140,50,50);\r\n  rect(width/2+105,height-115,10,65);\r\n}\r\nfunction drawGround(){\r\n  fill(160,110,45)\r\n  rect(0,height-50,width,50)\r\n}\r\nfunction windowResized(){\r\n  resizeCanvas(windowWidth, windowHeight);\r\n}\r\n"
+            }
+          ]
+        }
+      }
     }
   ]
 }
